@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<vehicle type="fillableImplement" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../bin/shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+	
+    <storeData>
+        <name>GN4000</name>
+        <functions>
+            <function>$l10n_function_additionalTank</function>
+			<function>$l10n_function_anhydrous</function>
+        </functions>
+        <image>Icons/storeGN40.dds</image>
+        <price>28500</price>
+        <lifetime>6000</lifetime>
+        <rotation>0</rotation>
+        <brand>BB</brand>
+        <category>Misc</category>
+    </storeData>
+    <base>
+        <typeDesc>$l10n_typeDesc_sprayerTank</typeDesc>
+        <filename>i3D/BehnkeGN4000.i3d</filename>
+        <size width="4.5" length="11.5" lengthOffset="3"/>
+        <speedLimit value="15"/>
+        <components>
+            <component centerOfMass="0 0 0" solverIterationCount="190" mass="2848"/>
+            <component centerOfMass="0 0 0" solverIterationCount="190" mass="1024"/>
+            <component solverIterationCount="190" mass="786"/>
+            <joint component1="1" component2="2" node="0>4" rotLimit="0 180 0" transLimit="0 0 0"/>
+            <joint component1="2" component2="3" node="1>2" rotLimit="60 0 0" transLimit="0 0 0"/>
+        </components> 
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+    </base>
+	<!--<baseMaterial>
+        <material name="Frame_mat" baseNode="0>3">
+            <shaderParameter name="colorMat0" value="SHARED_GREY2"/>
+        </material>
+		<material name="frame_mat" baseNode="0>8|2">
+            <shaderParameter name="colorMat0" value="SHARED_GREY2"/>
+        </material>
+		<material name="Axle" baseNode="1>3">
+            <shaderParameter name="colorMat0" value="SHARED_GREY2"/>
+        </material> 
+		<material name="Axle" baseNode="2>0">
+            <shaderParameter name="colorMat0" value="SHARED_GREY2"/>
+        </material> 
+		<material name="tank_mat" baseNode="0>9|0">
+            <shaderParameter name="colorMat0" value="SHARED_GREY2"/>
+        </material>
+    </baseMaterial>-->
+    <baseColorConfigurations price="0" useDefaultColors="false" title="Frame" defaultColorIndex="0">
+        <material name="Frame_mat" shaderParameter="colorMat0" />
+        <material name="frame_mat" shaderParameter="colorMat0" />
+		<material name="Axle" shaderParameter="colorMat0" />
+		<baseMaterialConfiguration name="BEHNKE"				color="SHARED_BLACKJET"		    material="0"  	price="0"/>
+		<baseMaterialConfiguration name="JOHN DEERE"		    color="JOHNDEERE_GREEN1"		material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="CLAAS"				    color="CLAAS_GREEN1"		    material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="FENDT"		            color="FENDT_NEWGREEN1"		    material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="CASE IH"				color="CASEIH_RED1"		        material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="MASSEY FERGUSON"		color="MASSEYFERGUSON_RED"		material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="VERSATILE"				color="VERSATILE_RED1"		    material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="CHALLENGER"			color="CHALLENGER_YELLOW1"	    material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="JCB"				    color="JCB_YELLOW1"		        material="0"  	price="1000"/>
+		<baseMaterialConfiguration name="NEW HOLLAND"			color="NEWHOLLAND_BLUE4"		material="0"  	price="1000"/>
+    </baseColorConfigurations>
+	<designColor2Configurations price="0" useDefaultColors="false" title="Tank" defaultColorIndex="0">
+		<material name="tank_mat" shaderParameter="colorMat0"/>
+		<designMaterialConfiguration name="STANDARD WHITE"			 material="0"  color="CLAAS_WHITE1"    price="0"/>
+    </designColor2Configurations>	
+	<designConfigurations title="Tattle Device">
+		<designConfiguration name="No" price="0">
+			<objectChange node="0>9|0|2" visibilityActive="false" visibilityInactive="false" />
+			<objectChange node="0>9|0|4" visibilityActive="false" visibilityInactive="false" />
+			<objectChange node="0>9|1|2" visibilityActive="false" visibilityInactive="false" />
+			<objectChange node="0>9|1|4" visibilityActive="false" visibilityInactive="false" />
+        </designConfiguration>
+		<designConfiguration name="Yes" price="3000">
+			<objectChange node="0>9|0|2" visibilityActive="true" visibilityInactive="false" />
+			<objectChange node="0>9|0|4" visibilityActive="true" visibilityInactive="false" />
+			<objectChange node="0>9|1|2" visibilityActive="true" visibilityInactive="false" />
+			<objectChange node="0>9|1|4" visibilityActive="true" visibilityInactive="false" />
+        </designConfiguration>
+    </designConfigurations>
+    <wheels>
+	    <wheelConfigurations> 
+            			<wheelConfiguration name="ContiCross TracHS3" price="0" brand="CONTINENTAL" saveId="CONTINENTAL">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/295_80R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.3" repr="1>1" forcePointRatio="0.5" initialCompression="52" suspTravel="0.15" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/295_80R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.3" repr="1>0" forcePointRatio="0.5" initialCompression="52" suspTravel="0.15" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/295_80R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.3" repr="0>12|0" forcePointRatio="0.5" initialCompression="52" suspTravel="0.15" spring="40" damper="50"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/295_80R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.3" repr="0>11|0" forcePointRatio="0.5" initialCompression="52" suspTravel="0.15" spring="40" damper="50"/>
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/295_80R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.3" repr="0>12|1" forcePointRatio="0.5" initialCompression="52" suspTravel="0.15" spring="40" damper="50"/>
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/continental/contiCrossTracHS3/295_80R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.3" repr="0>11|1" forcePointRatio="0.5" initialCompression="52" suspTravel="0.15" spring="40" damper="50"/>
+                    </wheel>
+                </wheels>
+				      <objectChange node="1>1" scaleActive="1.3 1.05 1.05"/>
+				      <objectChange node="1>0" scaleActive="1.3 1.05 1.05"/>
+				      <objectChange node="0>12|0" scaleActive="1.3 1.05 1.05"/>
+				      <objectChange node="0>11|0" scaleActive="1.3 1.05 1.05"/>
+				      <objectChange node="00>12|1" scaleActive="1.3 1.05 1.05"/>
+				      <objectChange node="0>11|1" scaleActive="1.3 1.05 1.05"/>
+					  <objectChange node="0>21" visibilityActive="false"/>
+				      <objectChange node="0>22" visibilityActive="false"/>
+            </wheelConfiguration> 
+			
+	        <wheelConfiguration name="CargoXBibHD 560/45 R22.5" price="4000" brand="MICHELIN" saveId="BASE_WHEELS">
+                <wheels autoRotateBackSpeed="2.0">  
+					<wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.03" repr="1>1"  forcePointRatio="0.5" initialCompression="20" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.02" repr="1>0" forcePointRatio="0.5" initialCompression="20" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.73" repr="0>12|0"   forcePointRatio="1" initialCompression="10" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="0.73" repr="0>11|0"  forcePointRatio="1" initialCompression="10" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.0" repr="0>12|1"  forcePointRatio="1" initialCompression="10" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+					<wheel filename="$data/shared/wheels/tires/michelin/cargoXBibHD/560_45R22_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.0" repr="0>11|1"  forcePointRatio="1" initialCompression="10" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                </wheels>
+				<objectChange node="0>21" visibilityActive="false"/>
+				<objectChange node="0>22" visibilityActive="false"/>
+		    </wheelConfiguration>
+			
+			<wheelConfiguration name="AC70G 480/70 R30 Twin" price="18000" brand="MITAS" saveId="MITAS_TWIN">
+                <wheels autoRotateBackSpeed="2.0">
+				    <wheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.3" repr="1>0"  forcePointRatio="0.5" initialCompression="20" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.3" repr="1>1" forcePointRatio="0.5" initialCompression="20" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.0" repr="0>21"   forcePointRatio="0.5" initialCompression="10" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+						<additionalWheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.225">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.0" repr="0>22"  forcePointRatio="0.5" initialCompression="10" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+						<additionalWheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" configId="dual" hasParticles="true" hasTireTracks="true" offset="0.225">
+                            <connector filename="$data/shared/wheels/rims/dual001_1.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            <objectChange node="1>0" translationActive="-0.75 -0.294 0"/>
+            <objectChange node="1>1" translationActive="0.75 -0.294 0"/>
+            <objectChange node="0>11" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>12" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="0>19" visibilityActive="true" visibilityInactive="false" scaleActive="1.2 1 1"/>
+			<objectChange node="0>20" visibilityActive="true" visibilityInactive="false" scaleActive="1.2 1 1"/>
+			<objectChange node="0>21" visibilityActive="true" translationActive="-1.57 0.59 -0.1"/>
+			<objectChange node="0>22" visibilityActive="true" translationActive="1.57 0.59 -0.1"/>
+			<objectChange node="0>12|0" visibilityActive="false"/>
+			<objectChange node="0>11|0" visibilityActive="false"/>
+			<objectChange node="0>12|1" visibilityActive="false"/>
+			<objectChange node="0>11|1" visibilityActive="false"/>
+            </wheelConfiguration>
+			
+			<!--<wheelConfiguration name="FFT-36" price="44000" brand="CAMSO">
+				<!-- back
+                <wheels autoRotateBackSpeed="5.0" speedDependentRotateBack="false">
+                    <wheel hasParticles="true" hasTireTracks="true">
+                        <physics rotSpeed="1" restLoad="1.7" repr="crawlerLeftBackWheelRepr" showSteeringAngle="false" radius="0.375" width="0.457" mass="0.75" initialCompression="15" suspTravel="0.27" spring="50" damper="40" frictionScale="1.5" tireType="crawler" supportsWheelSink="false"/>
+                        <tire tireTrackAtlasIndex="6" isCareWheel="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotSpeed="1" restLoad="1.7" repr="crawlerLeftFrontWheel" showSteeringAngle="false" radius="0.325" width="0.457" mass="0.75" initialCompression="35" suspTravel="0.27" spring="50" damper="40" frictionScale="1.5" tireType="crawler" supportsWheelSink="false"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+                    <wheel hasParticles="true" hasTireTracks="true">
+                        <physics rotSpeed="1" restLoad="1.7" repr="crawlerRightBackWheelRepr" showSteeringAngle="false" radius="0.375" width="0.457" initialCompression="15" suspTravel="0.27" spring="50" damper="40" frictionScale="1.5" tireType="crawler" supportsWheelSink="false"/>
+                        <tire tireTrackAtlasIndex="6" isCareWheel="false"/>
+                    </wheel>
+                    <wheel>
+                        <physics rotSpeed="1" restLoad="1.7" repr="crawlerRightFrontWheel" showSteeringAngle="false" radius="0.325" width="0.457" mass="0.75" initialCompression="35" suspTravel="0.27" spring="50" damper="40" frictionScale="1.5" tireType="crawler" supportsWheelSink="false"/>
+                        <tire isCareWheel="false"/>
+                    </wheel>
+					
+					<!-- front
+                    <wheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" isLeft="true" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.3" repr="1>1"  forcePointRatio="0.5" initialCompression="20" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/AC70G/480_70R30.xml" isLeft="false" hasTireTracks="true" hasParticles="true" >
+                        <physics tipOcclusionAreaGroupId="1" restLoad="1.3" repr="1>0" forcePointRatio="0.5" initialCompression="20" suspTravel="0.12" spring="60" damper="50" frictionScale="2.5" />
+                    </wheel>
+                </wheels>
+                <!--<crawlers>
+					<crawler filename="Tracks/FFT.xml" linkNode="0>14|0"  wheelIndices="3 4" isLeft="true"/>
+                    <crawler filename="Tracks/FFT.xml" linkNode="0>14|2" wheelIndices="5 6" isLeft="false"/>
+                </crawlers>
+				<objectChange node="1>0" translationActive="-0.75 -0.294 0"/>
+                <objectChange node="1>1" translationActive="0.75 -0.294 0"/>
+				<objectChange node="0>12|0" visibilityActive="false"/>
+				<objectChange node="0>11|0" visibilityActive="false"/>
+				<objectChange node="0>12|1" visibilityActive="false"/>
+				<objectChange node="0>11|1" visibilityActive="false"/>
+				<objectChange node="0>11" visibilityActive="false"/>
+				<objectChange node="0>12" visibilityActive="false"/>
+				<objectChange node="0>14|0" translationActive="1.55 0.4 -1.5" scaleActive="0.6 0.75 0.75"/>
+				<objectChange node="0>14|2" translationActive="-1.55 0.4 -1.5" scaleActive="0.6 0.75 0.75"/>
+			    <objectChange node="0>19" visibilityActive="true" scaleActive="1.005 1 1"/>
+			    <objectChange node="0>20" visibilityActive="true" scaleActive="1.005 1 1"/>
+				<objectChange node="0>21" visibilityActive="false"/>
+				<objectChange node="0>22" visibilityActive="false"/>
+			</wheelConfiguration>-->
+						
+		</wheelConfigurations> 			
+		<hubs>
+            <color0 useBaseColor="true" />             
+			<hub linkNode="1>1"   filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="true"  scale="0.2 0.3 0.3" />
+            <hub linkNode="1>0"  filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="false" scale="0.2 0.3 0.3" />
+            <hub linkNode="0>12|0"  filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="true"  scale="0.2 0.3 0.3" />
+            <hub linkNode="0>11|0" filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="false" scale="0.2 0.3 0.3" />
+			<hub linkNode="0>12|1"  filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="true"  scale="0.2 0.3 0.3" />
+            <hub linkNode="0>11|1" filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="false" scale="0.2 0.3 0.3" />
+            <hub linkNode="0>21" filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="false" scale="0.2 0.3 0.3" />
+            <hub linkNode="0>22" filename="$data/shared/wheels/hubs/hub_n10_4.xml" isLeft="true" scale="0.2 0.3 0.3" />
+		</hubs>
+    </wheels>
+	<rimColorConfigurations  price="0" useDefaultColors="false" title="Rims" defaultColorIndex="0">
+        <rimColorConfiguration name="BEHNKE"           material="0"  color="BIZON_BEIGE1"       price="0"/>
+        <rimColorConfiguration name="JOHN DEERE YELLOW" material="0"  color="JOHNDEERE_YELLOW1" price="300"/>
+        <rimColorConfiguration name="CASE IH BLACK"    material="0"  color="SHARED_BLACK2"     price="300"/>
+		<rimColorConfiguration name="CLAAS RED"        material="0"  color="CLAAS_RED1"        price="300"/>
+		<rimColorConfiguration name="VERSATILE ORANGE" material="0"  color="VERSATILE_ORANGE1" price="300"/>
+		<rimColorConfiguration name="JCB YELLOW"       material="0"  color="JCB_YELLOW1"       price="300"/>
+		<rimColorConfiguration name="WHITE"            material="0"  color="AEBI_WHITE1"       price="300"/>
+		<rimColorConfiguration name="GRAY"             material="0"  color="SHARED_GREY1"       price="300"/>
+        <rimColorConfiguration name="ALUMINUM"         material="8"  color="1 1 1"             price="1000"/>
+		<rimColorConfiguration name="STAINLESS"        material="3"  color="0.65 0.65 0.75"    price="1500"/>
+    </rimColorConfigurations>
+    <wearable wearDuration="480" workMultiplier="3" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="2>1" rootNode="2>" jointType="trailerLow" isDefaultLowered="false" needsLowering="false" allowsLowering="true"/>
+        </inputAttacherJoints>
+        <brakeForce force="1.2"/>		
+        <steeringAxleAngleScale startSpeed="25" endSpeed="70"/>
+    </attachable>       
+	<connectionHoses>
+        <hose inputAttacherJointIndices="1" type="TOOL_CONNECTOR_TOP_RIGHT" node="0>13|0" length="4.1" diameter="0.045" straighteningFactor="0.4"/>-->
+    </connectionHoses> 
+	<lights>
+		<states>
+			<state lightTypes="0"/>
+			<state lightTypes="0 1"/>
+			<state lightTypes="0 1 2"/>
+			<state lightTypes="0 1 2 3"/>
+        </states>
+		<defaultLights>
+			<defaultLight shaderNode="0>9|0|2|0|0" lightTypes="0" intensity="30"/>
+			<defaultLight shaderNode="0>9|1|2|0|0" lightTypes="0" intensity="30"/>
+        </defaultLights>
+	</lights>
+    <licensePlates>
+        <licensePlate node="0>3|4"  position="BACK"  preferedType="SQUARISH"/>
+    </licensePlates>
+	<sprayer allowsSpraying="false"/>
+    <fillUnit>
+        <fillUnitConfigurations>
+            <fillUnitConfiguration>
+                <fillUnits>
+				    <unloading width="30" offset="0 0 0"/>
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" fillTypes="ANHYDROUS"  capacity="15140"> 
+					<exactFillRootNode node="0>15"/>
+					</fillUnit>
+                </fillUnits>
+            </fillUnitConfiguration>
+        </fillUnitConfigurations>
+    </fillUnit> 
+    <dischargeable>
+        <dischargeNode node="0>23|0" canDischargeToGround="false" emptySpeed="400" fillUnitIndex="1">
+            <info length="3.0" width="3.0" zOffset="0"/>
+            <trigger node="0>23|1"/>
+        </dischargeNode>
+    </dischargeable>	
+	<ai>
+        <needsLowering value="false"/>
+        <allowTurnBackward value="false"/>
+		<agentAttachment width="4.5" length="11.5" lengthOffset="3" height="3.0" />
+    </ai>	
+	<foliageBending>
+		<bendingNode minX="-0.15" maxX="0.15" minZ="-0.5" maxZ="2.9" yOffset="-0.1" node="Hitch_col"/>  <!-- Hitch -->
+		<bendingNode minX="-1.1" maxX="1.1" minZ="-0.6" maxZ="0.6" yOffset="-0.3" node="Axel_col"/>   <!-- steer wheels -->
+		<bendingNode minX="-1" maxX="1" minZ="-2.6" maxZ="4.6" yOffset="0.5"/>  <!-- Mainframe -->
+		<bendingNode minX="-1.85" maxX="1.85" minZ="-0.45" maxZ="0.7" yOffset="0.5"/>   <!-- front rear -->
+		<bendingNode minX="-1.85" maxX="1.85" minZ="-1.7" maxZ="-0.55" yOffset="0.5"/> <!-- back rear -->
+	</foliageBending>	
+	<i3dMappings>
+		<i3dMapping id="Trailer_col" node="0>" />
+		<i3dMapping id="Axel_col" node="1>" />
+		<i3dMapping id="Hitch_col" node="2>" />
+		<i3dMapping id="crawlerLeftBackWheelRepr" node="0>14|0" />
+		<i3dMapping id="crawlerLeftBackWheelDriveNode" node="0>14|0|0" />
+		<i3dMapping id="crawlerLeftLinkNode" node="0>14|0|0|0" />
+		<i3dMapping id="crawlerLeftLinkNodeRefFrame" node="0>14|0|1" />
+		<i3dMapping id="crawlerLeftFrontWheel" node="0>14|1" />
+		<i3dMapping id="crawlerRightBackWheelRepr" node="0>14|2" />
+		<i3dMapping id="crawlerRightBackWheelDriveNode" node="0>14|2|0" />
+		<i3dMapping id="crawlerRightLinkNode" node="0>14|2|0|0" />
+		<i3dMapping id="crawlerRightLinkNodeRefFrame" node="0>14|2|1" />
+		<i3dMapping id="crawlerRightFrontWheel" node="0>14|3" />
+	</i3dMappings>
+</vehicle>

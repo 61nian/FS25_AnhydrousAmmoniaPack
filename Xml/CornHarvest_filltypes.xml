@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<map xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../shared/xml/schema/fillTypes.xsd">
+    
+	<fillTypes>    
+		<fillType name="ANHYDROUS" title="$l10n_fill_anhydrous" showOnPriceTable="true" >
+			<physics massPerLiter="0.68" maxPhysicalSurfaceAngle="0" />
+			<economy pricePerLiter="1.50" />
+			<image hud="huds/hud_fill_anhydrous.png" hudSmall="huds/hud_fill_anhydrous_sml.png" />
+		</fillType>
+    </fillTypes>		
+	
+    <fillTypeCategories>
+        <fillTypeCategory name="LIQUID" >ANHYDROUS</fillTypeCategory>
+		<!--<fillTypeCategory name="SLURRYTANK" >ANHYDROUS</fillTypeCategory>-->
+	</fillTypeCategories>
+	
+	
+	<fillTypeSound fillTypes="ANHYDROUS">
+        <sound template="defaultRefuelSound"/>
+    </fillTypeSound>
+
+	
+</map>

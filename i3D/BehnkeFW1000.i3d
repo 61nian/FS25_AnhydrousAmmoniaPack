@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="BehnkeFW1000.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="27" filename="../Textures/5000decal.dds"/>
+    <File fileId="41" filename="../Textures/BigTank5_CapDecals.dds"/>
+    <File fileId="42" filename="../Textures/BigTank5_decals.dds"/>
+    <File fileId="43" filename="../Textures/BigTank5_decalsRight.dds"/>
+    <File fileId="1" filename="../Textures/Decals_SPEC.dds" colorProfile="sRGB"/>
+    <File fileId="6" filename="../Textures/Frame_SPEC.dds"/>
+    <File fileId="12" filename="../Textures/HitchPin.dds"/>
+    <File fileId="13" filename="../Textures/HitchPin_SPEC.dds"/>
+    <File fileId="11" filename="../Textures/Hitch_SPEC.dds"/>
+    <File fileId="38" filename="../Textures/Hoses.dds"/>
+    <File fileId="29" filename="../Textures/Hoses_SPEC.dds"/>
+    <File fileId="31" filename="../Textures/Hoses_SPEC2.dds"/>
+    <File fileId="20" filename="../Textures/MB100.dds"/>
+    <File fileId="28" filename="../Textures/MB200.dds"/>
+    <File fileId="40" filename="../Textures/QSC_logo.dds"/>
+    <File fileId="35" filename="../Textures/TankParts.dds"/>
+    <File fileId="45" filename="../Textures/bb-trailers1.dds"/>
+    <File fileId="21" filename="../Textures/decal_ktp_specular.dds"/>
+    <File fileId="36" filename="../Textures/default_normal.dds"/>
+    <File fileId="39" filename="../Textures/namePlate.dds"/>
+    <File fileId="22" filename="../Textures/tank_normal.dds"/>
+    <File fileId="23" filename="../Textures/tank_specular.dds"/>
+    <File fileId="32" filename="../Textures/waterTankDecal.dds"/>
+    <File fileId="7" filename="../shaders/vehicleShader.xml"/>
+    <File fileId="14" filename="$data/shared/assets/assetLibraryDecals_diffuse.png"/>
+    <File fileId="15" filename="$data/shared/assets/assetLibraryDecals_normal.png"/>
+    <File fileId="18" filename="$data/shared/assets/reflectors/lizard/bigTriangle_normal.png"/>
+    <File fileId="19" filename="$data/shared/assets/reflectors/lizard/bigTriangle_vmask.png"/>
+    <File fileId="5" filename="$data/shared/default_normal.dds"/>
+    <File fileId="26" filename="$data/shared/default_specular.dds"/>
+    <File fileId="30" filename="$data/shared/window02_diffuse.dds"/>
+    <File fileId="24" filename="$data/shared/window_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="adStrip" materialId="5" diffuseColor="1 1 1 1" alphaBlending="true" customShaderId="7">
+    </Material>
+    <Material name="assetLibraryDecals_mat" materialId="6" specularColor="0.494118 1 0.494118" customShaderId="7" customShaderVariation="colorMask">
+      <Texture fileId="14"/>
+      <Normalmap fileId="15"/>
+    </Material>
+    <Material name="Axles" materialId="7" diffuseColor="1 1 1 1" customShaderId="7" customShaderVariation="colorMask">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+      <CustomParameter name="colorMat0" value="0 0 0 1"/>
+    </Material>
+    <Material name="bigTriangle_mat" materialId="8" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="7" customShaderVariation="reflector_colorMask">
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+    </Material>
+    <Material name="Blue" materialId="9" customShaderId="7">
+      <Texture fileId="35"/>
+      <Normalmap fileId="36"/>
+      <Glossmap fileId="28"/>
+    </Material>
+    <Material name="bolts" materialId="10" diffuseColor="0.8 0.8 0.8 1" specularColor="0.486275 1 0.894118">
+    </Material>
+    <Material name="brandLogo" materialId="11" customShaderId="7">
+      <Texture fileId="40"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="decal_back" materialId="12" alphaBlending="true" customShaderId="7">
+      <Texture fileId="41"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="decal_sideLeft" materialId="13" alphaBlending="true" customShaderId="7">
+      <Texture fileId="42"/>
+      <Normalmap fileId="36"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="decal_sideRight" materialId="14" alphaBlending="true" customShaderId="7">
+      <Texture fileId="43"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="Default" materialId="15" customShaderId="7">
+      <Texture fileId="45"/>
+      <Normalmap fileId="36"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="frame_mat" materialId="16" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="20"/>
+      <CustomParameter name="colorMat0" value="0 0 0 0"/>
+    </Material>
+    <Material name="GaugeFace" materialId="17">
+      <Glossmap fileId="1"/>
+    </Material>
+    <Material name="hitchPin" materialId="18" customShaderId="7">
+      <Texture fileId="12"/>
+      <Glossmap fileId="13"/>
+    </Material>
+    <Material name="HoseFitting" materialId="19" diffuseColor="1 1 1 1" specularColor="1 1 0" customShaderId="7">
+    </Material>
+    <Material name="lambert1" materialId="20" diffuseColor="0.564706 0.564706 0.564706 1" customShaderId="7" customShaderVariation="colorMask">
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 0"/>
+    </Material>
+    <Material name="Material.005" materialId="21" diffuseColor="1 1 1 1" specularColor="0.784314 1 1">
+    </Material>
+    <Material name="outputHose" materialId="22" customShaderId="7" customShaderVariation="colorMask">
+      <Texture fileId="38"/>
+      <Glossmap fileId="29"/>
+      <CustomParameter name="colorMat0" value="0 0 0 1"/>
+    </Material>
+    <Material name="outputHose" materialId="23" diffuseColor="1 1 1 1" customShaderId="7" shadingRate="1x2">
+      <Glossmap fileId="28"/>
+    </Material>
+    <Material name="rearhitch" materialId="24" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="11"/>
+      <CustomParameter name="colorMat0" value="0.01 0 0 0"/>
+    </Material>
+    <Material name="reliefValve" materialId="25" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Normalmap fileId="22"/>
+      <Glossmap fileId="21"/>
+      <CustomParameter name="colorMat0" value="1 1 1 16"/>
+      <CustomParameter name="colorMat2" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat6" value="1 1 1 1"/>
+      <CustomParameter name="colorMat7" value="1 1 1 3"/>
+    </Material>
+    <Material name="rivet" materialId="26" diffuseColor="0.8 0.8 0.8 1" specularColor="0.494118 1 0" customShaderId="7" customShaderVariation="colorMask" shadingRate="1x2">
+      <CustomParameter name="colorMat0" value="0.8 0.8 0.8 3"/>
+    </Material>
+    <Material name="tagPlate" materialId="27" customShaderId="7">
+      <Texture fileId="39"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="tank_mat" materialId="28" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Glossmap fileId="21"/>
+      <CustomParameter name="colorMat0" value="1 1 1 16"/>
+    </Material>
+    <Material name="tattle_Device" materialId="29" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Normalmap fileId="22"/>
+      <Glossmap fileId="23"/>
+      <CustomParameter name="colorMat2" value="0.2 0.2 0.3 44"/>
+      <CustomParameter name="colorMat3" value="0.8 0.8 0.8 5"/>
+      <CustomParameter name="colorMat4" value="0 0 0 1"/>
+      <CustomParameter name="colorMat5" value="1 1 1 1"/>
+      <CustomParameter name="colorMat6" value="1 1 1 1"/>
+      <CustomParameter name="colorMat7" value="1 1 1 3"/>
+    </Material>
+    <Material name="tattle_Float" materialId="30" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Glossmap fileId="21"/>
+      <CustomParameter name="colorMat6" value="0.2 0.2 0.2 0"/>
+    </Material>
+    <Material name="tattleDecals" materialId="31" customShaderId="7">
+      <Texture fileId="27"/>
+      <Glossmap fileId="28"/>
+    </Material>
+    <Material name="tattleGlass" materialId="32" diffuseColor="1 1 1 1" customShaderId="7" customShaderVariation="staticLight">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="24"/>
+      <CustomParameter name="colorMat0" value="0 1 0 27"/>
+      <CustomParameter name="lightControl" value="55"/>
+      <CustomParameter name="blinkOffset" value="0 0 0 0"/>
+    </Material>
+    <Material name="tattleGlassBulb" materialId="33" diffuseColor="0 0.47451 0 1" customShaderId="7" customShaderVariation="staticLight">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="26"/>
+      <CustomParameter name="colorMat0" value="0 1 0 27"/>
+      <CustomParameter name="blinkOffset" value="0 0 0 0"/>
+    </Material>
+    <Material name="tattleHose" materialId="34" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Glossmap fileId="29"/>
+      <CustomParameter name="colorMat0" value="0 0 0 5"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="35" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="valveball" materialId="36" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Glossmap fileId="21"/>
+      <CustomParameter name="colorMat0" value="1 1 1 8"/>
+    </Material>
+    <Material name="water_Tank" materialId="37" diffuseColor="0.8 0.8 0.8 1" customShaderId="7" customShaderVariation="colorMask">
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="21"/>
+      <CustomParameter name="colorMat0" value="0.35 0.35 0.35 5"/>
+      <CustomParameter name="colorMat1" value="1 1 1 3"/>
+      <CustomParameter name="colorMat2" value="0.65 0.65 0.65 5"/>
+      <CustomParameter name="colorMat3" value="0.4 0.4 0.4 5"/>
+    </Material>
+    <Material name="waterTank_decal" materialId="38" customShaderId="7">
+      <Texture fileId="32"/>
+      <Glossmap fileId="21"/>
+    </Material>
+    <Material name="waterTank_hose" materialId="39" alphaBlending="true" customShaderId="7">
+      <Texture fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="BehnkeFW1000.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="TankCol" shapeId="1" dynamic="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="97" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="17">
+      <TransformGroup name="NewVis" scale="0.8 0.8 0.8" nodeId="98">
+        <TransformGroup name="LeftRear" translation="1.173 0.62 -2.12708" nodeId="99"/>
+        <TransformGroup name="RightRear" translation="-1.173 0.62 -2.12708" nodeId="100"/>
+        <TransformGroup name="AxleJoint" translation="0 0.848377 1.55231" nodeId="101"/>
+        <TransformGroup name="attacherJointRear" translation="0 0.685 -2.455" rotation="0 90 0" nodeId="102"/>
+        <Shape name="Bolts" shapeId="2" nodeId="103" castsShadows="true" receiveShadows="true" materialIds="10"/>
+        <Shape name="Frame" shapeId="3" nodeId="104" castsShadows="true" receiveShadows="true" materialIds="7">
+          <Shape name="FrameAxles" shapeId="4" nodeId="105" castsShadows="true" receiveShadows="true" materialIds="7"/>
+          <TransformGroup name="licensePlateBack" translation="0.58 0.86 -2.205" rotation="0 180 0" nodeId="106"/>
+        </Shape>
+        <Shape name="RearHitch" shapeId="5" nodeId="107" castsShadows="true" receiveShadows="true" materialIds="24">
+          <Shape name="hitchPin" translation="0 -0.0802862 -0.04" shapeId="6" nodeId="108" castsShadows="true" receiveShadows="true" materialIds="18"/>
+        </Shape>
+        <TransformGroup name="safteyTriangle" nodeId="109">
+          <Shape name="screwDecal" shapeId="7" clipDistance="30" nodeId="110" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="6"/>
+          <Shape name="bigTriangle" shapeId="8" clipDistance="300" nodeId="111" castsShadows="true" receiveShadows="true" materialIds="8"/>
+          <Shape name="triangle_post" shapeId="9" nodeId="112" castsShadows="true" receiveShadows="true" materialIds="16"/>
+        </TransformGroup>
+        <Shape name="Spring" shapeId="10" nodeId="113" castsShadows="true" receiveShadows="true" materialIds="7"/>
+        <TransformGroup name="Wheels" nodeId="114">
+          <TransformGroup name="LeftRearImp" translation="1.173 0.565 -2.12708" nodeId="115"/>
+          <TransformGroup name="RightRearImp" translation="-1.173 0.565304 -2.12708" nodeId="116"/>
+        </TransformGroup>
+        <Shape name="tank" shapeId="11" nodeId="117" castsShadows="true" receiveShadows="true" materialIds="28">
+          <Shape name="support" shapeId="12" nodeId="118" castsShadows="true" receiveShadows="true" materialIds="28"/>
+          <Shape name="drainPlug" shapeId="13" nodeId="119" castsShadows="true" receiveShadows="true" materialIds="28"/>
+          <Shape name="tattleDevice" shapeId="14" nodeId="120" castsShadows="true" receiveShadows="true" materialIds="29">
+            <TransformGroup name="tattleLight" nodeId="121">
+              <Shape name="tattleGlass" shapeId="15" nodeId="122" castsShadows="true" receiveShadows="true" materialIds="32">
+                <Shape name="tattleBulb" shapeId="16" nodeId="123" castsShadows="true" receiveShadows="true" materialIds="33"/>
+                <Light name="tattleLight" nodeId="124" type="spot" color="0 1 0" emitDiffuse="true" emitSpecular="true" castShadowMap="true" depthMapBias="0.0012" depthMapSlopeScaleBias="2" depthMapSlopeClamp="0.0005" depthMapResolution="1024" shadowFarDistance="1000" shadowExtrusionDistance="200" softShadowsLightSize="0.01" softShadowsLightDistance="15" softShadowsDepthBiasFactor="5" softShadowsMaxPenumbraSize="0.5" range="0.125" coneAngle="50" dropOff="3"/>
+              </Shape>
+            </TransformGroup>
+            <Shape name="tattleDecals" shapeId="17" nodeId="125" castsShadows="false" receiveShadows="false" materialIds="31"/>
+            <Shape name="tattleFloat_decal" shapeId="18" nodeId="126" castsShadows="true" receiveShadows="true" materialIds="31"/>
+            <Shape name="tattleFloat" shapeId="19" nodeId="127" castsShadows="false" receiveShadows="false" materialIds="30"/>
+            <Shape name="tattleHose" shapeId="20" nodeId="128" castsShadows="false" receiveShadows="false" materialIds="34"/>
+          </Shape>
+          <Shape name="waterTank" shapeId="21" nodeId="129" castsShadows="true" receiveShadows="true" materialIds="37">
+            <Shape name="waterTank_hoses" shapeId="22" nodeId="130" castsShadows="true" receiveShadows="true" materialIds="39"/>
+            <Shape name="waterTank_decal" shapeId="23" nodeId="131" castsShadows="false" receiveShadows="true" materialIds="38"/>
+          </Shape>
+          <Shape name="hosesupport" shapeId="24" nodeId="132" castsShadows="true" receiveShadows="true" materialIds="28"/>
+          <Shape name="gaugeProtector" shapeId="25" nodeId="133" castsShadows="true" receiveShadows="true" materialIds="28,28"/>
+          <Shape name="rivet" shapeId="26" nodeId="134" castsShadows="true" receiveShadows="true" materialIds="26"/>
+          <Shape name="liftHooks" shapeId="27" nodeId="135" castsShadows="true" receiveShadows="true" materialIds="28"/>
+          <Shape name="protector" translation="0 0 0.13" shapeId="28" nodeId="136" castsShadows="true" receiveShadows="true" materialIds="28"/>
+          <Shape name="hoseFittingsCenter" shapeId="29" nodeId="137" castsShadows="true" receiveShadows="true" materialIds="19"/>
+          <TransformGroup name="valvesOutlet" nodeId="138">
+            <Shape name="Cap1.000" shapeId="30" nodeId="139" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="ValveHandlePin.000" shapeId="31" nodeId="140" castsShadows="true" receiveShadows="true" materialIds="21"/>
+            <Shape name="FillValve.000" shapeId="32" nodeId="141" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="ValveParts.000" shapeId="33" nodeId="142" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="ValveHandles.000" shapeId="34" nodeId="143" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="UnloadValve.000" shapeId="35" nodeId="144" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="VaporValve.000" shapeId="36" nodeId="145" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            <Shape name="fillvalve_ball01" shapeId="37" nodeId="146" castsShadows="false" receiveShadows="false" materialIds="36"/>
+            <Shape name="fillvalve_ball02" translation="0 0 -0.13" shapeId="37" nodeId="147" castsShadows="false" receiveShadows="false" materialIds="36"/>
+          </TransformGroup>
+          <TransformGroup name="attachable" nodeId="148">
+            <TransformGroup name="connectionHoses" nodeId="149">
+              <TransformGroup name="hydraulicOut" translation="0.0394946 2.50577 2.38948" rotation="8.66369 -0 0" nodeId="150"/>
+              <Shape name="outputHoseDynamic" shapeId="38" nodeId="151" castsShadows="false" receiveShadows="false" materialIds="22"/>
+            </TransformGroup>
+            <Shape name="staticHoses" shapeId="39" nodeId="152" castsShadows="false" receiveShadows="false" materialIds="22">
+              <Shape name="outputFitting" shapeId="40" nodeId="153" castsShadows="true" receiveShadows="true" materialIds="23"/>
+              <TransformGroup name="hydraulicOut_connector" translation="0.328551 1.54431 2.66462" rotation="85.3144 -0 0" nodeId="154"/>
+            </Shape>
+          </TransformGroup>
+          <Shape name="tagPlate" shapeId="41" nodeId="155" castsShadows="false" receiveShadows="true" materialIds="27"/>
+          <Shape name="brandLogo" shapeId="42" nodeId="156" castsShadows="false" receiveShadows="true" materialIds="11"/>
+          <Shape name="decal_back" shapeId="43" nodeId="157" castsShadows="false" receiveShadows="true" materialIds="12"/>
+          <Shape name="decal_sideLeft" shapeId="44" nodeId="158" castsShadows="true" receiveShadows="true" materialIds="13"/>
+          <Shape name="decal_sideRight" shapeId="45" nodeId="159" castsShadows="false" receiveShadows="true" materialIds="14"/>
+          <Shape name="exactFillRootNode" translation="0 -0.156488 1.38286" shapeId="46" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" clipDistance="300" nodeId="160" castsShadows="true" receiveShadows="true" nonRenderable="true" distanceBlending="false" materialIds="35"/>
+          <Shape name="reliefValve" shapeId="47" nodeId="161" castsShadows="true" receiveShadows="true" materialIds="25"/>
+          <TransformGroup name="discharge" nodeId="162">
+            <TransformGroup name="dischargeNode" translation="0 1.7887 -0.0239595" nodeId="163"/>
+            <Shape name="dischargeTrigger" translation="0 1.72567 -0.00627319" shapeId="48" visibility="false" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000000" nodeId="164" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="20"/>
+          </TransformGroup>
+        </Shape>
+        <TransformGroup name="safteyTriangle2" translation="-0.72 1.554 -0.584925" visibility="false" nodeId="165">
+          <Shape name="screwDecal" shapeId="7" clipDistance="30" nodeId="166" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="6"/>
+          <Shape name="bigTriangle" shapeId="8" clipDistance="300" nodeId="167" castsShadows="true" receiveShadows="true" materialIds="8"/>
+          <Shape name="triangle_post" shapeId="9" nodeId="168" castsShadows="true" receiveShadows="true" materialIds="28"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Camera name="camera" translation="2.07931 2.44541 1.2772" rotation="-26.6018 53.5525 -6.73651e-08" nodeId="169" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+    </Shape>
+    <Shape name="Axle_col" translation="0 0.687645 1.24155" shapeId="49" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="15" clipDistance="300" nodeId="170" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="17">
+      <Shape name="Axle" scale="0.8 0.8 0.8" shapeId="50" nodeId="171" castsShadows="true" receiveShadows="true" materialIds="7">
+        <TransformGroup name="LeftFront" translation="1.173 -0.24 4e-06" nodeId="172"/>
+        <TransformGroup name="RightFront" translation="-1.173 -0.24 4e-06" nodeId="173"/>
+        <TransformGroup name="HitchJoint" translation="-0 -0.07 0.16" nodeId="174"/>
+        <Shape name="AxleAxles" shapeId="51" nodeId="175" castsShadows="true" receiveShadows="true" materialIds="7"/>
+        <TransformGroup name="Wheels" nodeId="176">
+          <TransformGroup name="LeftFrontImp" translation="1.173 -0.265 4e-06" nodeId="177"/>
+          <TransformGroup name="RightFrontImp" translation="-1.173 -0.265 4e-06" nodeId="178"/>
+        </TransformGroup>
+      </Shape>
+    </Shape>
+    <Shape name="HitchCol" translation="0 0.639528 1.36902" rotation="0.189953 -0 0" scale="1 1.2118 1.04678" shapeId="52" dynamic="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="179" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="17">
+      <Shape name="Hitch" translation="0 -0.00435611 3.47966e-05" rotation="-0.219895 -0 0" scale="0.8 0.625 0.755" shapeId="53" nodeId="180" castsShadows="true" receiveShadows="true" materialIds="7">
+        <Shape name="HitchBolts" shapeId="54" nodeId="181" castsShadows="true" receiveShadows="true" materialIds="10"/>
+        <TransformGroup name="attacherJoint" translation="0 0.02 3.275" rotation="0 90 0" nodeId="182"/>
+        <Shape name="HitchHandle" shapeId="55" nodeId="183" castsShadows="true" receiveShadows="true" materialIds="7"/>
+        <Shape name="adStrip" translation="-0.045 -0.0171382 2.823" rotation="180 -90 -180" scale="0.307 0.243669 1" shapeId="56" clipDistance="300" nodeId="184" castsShadows="false" receiveShadows="true" materialIds="15,5"/>
+        <Shape name="adStrip" translation="0.045 -0.0171382 2.823" rotation="1.66624e-10 90 1.63798e-05" scale="0.307 0.243669 1" shapeId="56" clipDistance="300" nodeId="185" castsShadows="true" receiveShadows="true" materialIds="15,5"/>
+      </Shape>
+      <TransformGroup name="transform" translation="0 0.00471503 -1.76951e-08" rotation="-0.219895 -0 0" scale="1 0.825223 0.955308" nodeId="186">
+        <TransformGroup name="transform" translation="0.00470278 -0.0163515 3.26999" nodeId="187"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+</i3D>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="horizontal_tank.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="31" filename="../Textures/LF_decals.dds"/>
+    <File fileId="28" filename="../Textures/anhydrous_tank_decals4.dds"/>
+    <File fileId="26" filename="../Textures/bollards_Normal.dds"/>
+    <File fileId="25" filename="../Textures/bollards_diffuse.dds"/>
+    <File fileId="8" filename="../Textures/gaugecovers_Normal.dds"/>
+    <File fileId="7" filename="../Textures/gaugecovers_diffuse.dds"/>
+    <File fileId="2" filename="../Textures/maintank_Normal.dds"/>
+    <File fileId="1" filename="../Textures/maintank_diffuse.dds"/>
+    <File fileId="16" filename="../Textures/tanklegs2_Base_color.dds"/>
+    <File fileId="17" filename="../Textures/tanklegs2_Normal.dds"/>
+    <File fileId="18" filename="../Textures/tanklegs2_specular.dds"/>
+    <File fileId="21" filename="../Textures/uppervalve_Normal.dds"/>
+    <File fileId="20" filename="../Textures/uppervalve_diffuse.dds"/>
+    <File fileId="12" filename="../shaders/vehicleShader.xml"/>
+    <File fileId="27" filename="$data/maps/textures/shared/default_specular.dds"/>
+    <File fileId="22" filename="$data/placeables/planET/bga99kw/bgaConcrete_diffuse.dds"/>
+    <File fileId="23" filename="$data/placeables/planET/bga99kw/bgaConcrete_normal.dds"/>
+    <File fileId="24" filename="$data/placeables/planET/bga99kw/bgaConcrete_specular.dds"/>
+    <File fileId="30" filename="$data/shaders/decalShader.xml"/>
+    <File fileId="4" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="10" filename="$data/shared/default_normal.dds"/>
+    <File fileId="3" filename="$data/shared/default_specular.dds"/>
+    <File fileId="11" filename="$data/shared/default_vmask.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="bollards" materialId="5" customShaderId="4">
+      <Texture fileId="25"/>
+      <Normalmap fileId="26" bumpDepth="1.5"/>
+      <Glossmap fileId="27"/>
+    </Material>
+    <Material name="concreteMat" materialId="6" diffuseColor="0.054902 0.0431373 0.0392157 1">
+    </Material>
+    <Material name="decals" materialId="7" specularColor="0.6 1 0" alphaBlending="true" customShaderId="30">
+      <Texture fileId="28"/>
+    </Material>
+    <Material name="decals2" materialId="8" specularColor="0.494118 1 0" alphaBlending="true" customShaderId="30">
+      <Texture fileId="31"/>
+    </Material>
+    <Material name="glossySteel" materialId="9" customShaderId="4">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17" bumpDepth="0"/>
+      <Glossmap fileId="18"/>
+    </Material>
+    <Material name="pad_mat" materialId="10" customShaderId="4">
+      <Texture fileId="22"/>
+      <Normalmap fileId="23" bumpDepth="0"/>
+      <Glossmap fileId="24"/>
+    </Material>
+    <Material name="roughMetal" materialId="11" customShaderId="4">
+      <Texture fileId="7"/>
+      <Normalmap fileId="8"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="tankBase" materialId="12" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="tankstands" materialId="13" diffuseColor="0.8 0.8 0.8 1" customShaderId="12" customShaderVariation="colorMask">
+      <Normalmap fileId="10"/>
+      <Glossmap fileId="11"/>
+    </Material>
+    <Material name="UnnamedMaterial" materialId="14" diffuseColor="1 1 1 1">
+    </Material>
+    <Material name="uppervalve" materialId="15" customShaderId="4">
+      <Texture fileId="20"/>
+      <Normalmap fileId="21" bumpDepth="0"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="horizontal_tank.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="transform" nodeId="32">
+      <TransformGroup name="visuals" nodeId="33">
+        <TransformGroup name="maintank" translation="0 -0.263932 0" nodeId="34">
+          <Shape name="tank_hp" translation="0.0509656 1.73328 0" rotation="-180 89.6948 -180" scale="1.11642 1.08066 1.08066" shapeId="1" clipDistance="500" nodeId="35" castsShadows="true" receiveShadows="true" materialIds="12"/>
+          <Shape name="pressureGauge_hp" translation="-4.50578 1.73327 0.0240181" rotation="-180 89.6948 -180" scale="0.826909 0.826908 0.857804" shapeId="2" clipDistance="500" nodeId="36" castsShadows="true" receiveShadows="true" materialIds="11"/>
+          <Shape name="tank_stand" translation="0.14618 0.719938 -0.000779266" rotation="-180 89.6948 -180" scale="1.11642 1.08066 1.08066" shapeId="3" clipDistance="500" nodeId="37" castsShadows="true" receiveShadows="true" materialIds="13"/>
+          <Shape name="tank_stand_bolts" translation="0.14618 0.719938 -0.000779266" rotation="-180 89.6942 -180" scale="0.481941 0.481941 0.481941" shapeId="4" clipDistance="500" nodeId="38" castsShadows="true" receiveShadows="true" materialIds="9,6"/>
+        </TransformGroup>
+        <TransformGroup name="valves" translation="0 -0.140759 0" nodeId="39">
+          <Shape name="fillHandle1_hp" translation="-6.43286 1.44 0.209337" rotation="54.5021 82.0809 7.83227" scale="1.45517 1.45516 1.81314" shapeId="5" clipDistance="500" nodeId="40" castsShadows="true" receiveShadows="true" materialIds="15"/>
+          <Shape name="fillHandle1_hp.001" translation="-6.43458 1.44045 -0.130837" rotation="54.5021 82.0809 7.83227" scale="1.45517 1.45516 1.81314" shapeId="5" clipDistance="500" nodeId="41" castsShadows="true" receiveShadows="true" materialIds="15"/>
+          <Shape name="fillValve1_Bolt_hp" translation="-6.39111 1.38855 0.21116" rotation="45 85.7112 -3.45893e-05" scale="1.0745 1.0745 1.0745" shapeId="6" clipDistance="500" nodeId="42" castsShadows="true" receiveShadows="true" materialIds="15"/>
+          <Shape name="fillValve1_Bolt_hp.001" translation="-6.39109 1.38855 -0.128783" rotation="45 85.7112 -3.45893e-05" scale="1.0745 1.0745 1.0745" shapeId="6" clipDistance="500" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="15"/>
+          <Shape name="fillValve1_hp" translation="-6.3731 1.3834 0.210976" rotation="-162.507 88.9407 -171.504" scale="1.0745 1.0745 1.0745" shapeId="7" clipDistance="500" nodeId="44" castsShadows="true" receiveShadows="true" materialIds="15"/>
+          <Shape name="fillValve1_hp.001" translation="-6.37491 1.3834 -0.128957" rotation="-162.507 88.9407 -171.504" scale="1.0745 1.0745 1.0745" shapeId="7" clipDistance="500" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="15"/>
+        </TransformGroup>
+        <TransformGroup name="pad" nodeId="46">
+          <Shape name="pad" translation="-2.30568 1.83831e-07 1.5707" rotation="-180 89.6948 -180" scale="0.256313 0.178735 0.102778" shapeId="8" clipDistance="500" nodeId="47" castsShadows="true" receiveShadows="true" materialIds="10"/>
+          <Shape name="pad" translation="0.34789 2.9838e-07 1.55656" rotation="-180 89.6948 -180" scale="0.256313 0.178735 0.102778" shapeId="8" clipDistance="500" nodeId="48" castsShadows="true" receiveShadows="true" materialIds="10"/>
+          <Shape name="pad" translation="2.99921 4.12832e-07 1.54243" rotation="-180 89.6948 -180" scale="0.256313 0.178735 0.102778" shapeId="8" clipDistance="500" nodeId="49" castsShadows="true" receiveShadows="true" materialIds="10"/>
+          <Shape name="pad" translation="-4.95937 6.92762e-08 1.58485" rotation="-180 89.6948 -180" scale="0.256313 0.178735 0.102778" shapeId="8" clipDistance="500" nodeId="50" castsShadows="true" receiveShadows="true" materialIds="10"/>
+        </TransformGroup>
+        <TransformGroup name="bollards" static="true" nodeId="51">
+          <Shape name="SafetyBollard1" translation="-7.808 -0.051 1.147" shapeId="9" static="true" clipDistance="500" nodeId="52" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard2" translation="-4.808 -0.051 1.147" shapeId="9" static="true" clipDistance="500" nodeId="53" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard3" translation="-0.719 -0.051 1.147" shapeId="9" static="true" clipDistance="500" nodeId="54" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard4" translation="3.375 -0.051 1.147" shapeId="9" static="true" clipDistance="500" nodeId="55" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard5" translation="6.12741 -0.051 1.147" shapeId="9" static="true" clipDistance="500" nodeId="56" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard6" translation="6.12741 -0.051 -0.876" shapeId="9" static="true" clipDistance="500" nodeId="57" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard7" translation="6.12741 -0.051 -2.92761" shapeId="9" static="true" clipDistance="500" nodeId="58" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard8" translation="3.375 -0.051 -2.92761" shapeId="9" static="true" clipDistance="500" nodeId="59" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard9" translation="-0.719 -0.051 -2.92761" shapeId="9" static="true" clipDistance="500" nodeId="60" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard10" translation="-4.808 -0.051 -2.92761" shapeId="9" static="true" clipDistance="500" nodeId="61" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard11" translation="-7.808 -0.051 -2.92761" shapeId="9" static="true" clipDistance="500" nodeId="62" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="SafetyBollard12" translation="-7.808 -0.051 -0.876" shapeId="9" static="true" clipDistance="500" nodeId="63" castsShadows="true" receiveShadows="true" materialIds="5"/>
+        </TransformGroup>
+        <Shape name="decal1" translation="-3.949 1.948 0.878" rotation="-90.898 70.117 -90.844" scale="1.116 1.081 1.081" shapeId="10" clipDistance="500" nodeId="64" castsShadows="true" receiveShadows="true" materialIds="7"/>
+        <Shape name="decal2" translation="-3.949 1.948 0.878" rotation="-90.898 70.117 -90.844" scale="1.116 1.081 1.081" shapeId="10" clipDistance="500" nodeId="65" castsShadows="true" receiveShadows="true" materialIds="8"/>
+      </TransformGroup>
+      <TransformGroup name="area" nodeId="66">
+        <TransformGroup name="clearAreaStart" translation="-7.274 0 -2.315" nodeId="67">
+          <TransformGroup name="width" translation="15 0 0" nodeId="68"/>
+          <TransformGroup name="height" translation="0 0 5" nodeId="69"/>
+        </TransformGroup>
+        <TransformGroup name="testAreaStart" translation="-7.274 0 -2.315" nodeId="70">
+          <TransformGroup name="testAreaEnd" translation="15 3 5" nodeId="71"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="tipBlocker" translation="0 0.550577 0" scale="11.9395 1 3.20666" shapeId="11" visibility="false" static="true" nodeId="72" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14"/>
+      <Shape name="fillTrigger" translation="0 1.25691 3.09412" scale="13.0633 2.50045 8.00784" shapeId="11" visibility="false" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000000" nodeId="73" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14"/>
+      <TransformGroup name="gameplay" nodeId="74">
+        <TransformGroup name="IN" nodeId="75">
+          <TransformGroup name="unloadingStation" nodeId="76">
+            <TransformGroup name="unloadingTriggers" nodeId="77">
+              <Shape name="exactFillRootNode" translation="-5.07 1.55647 3.186" scale="11.665 2.55832 6.08973" shapeId="11" visibility="false" static="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="78" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14"/>
+              <TransformGroup name="unloadingStationAINode" translation="-5.07 0 3.91022" rotation="0 90 0" nodeId="79"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="OUT" nodeId="80">
+          <TransformGroup name="loadingStation" nodeId="81">
+            <TransformGroup name="loadingTriggers" nodeId="82">
+              <Shape name="loadingTrigger" translation="0 -0.686221 2.02128" scale="1 2.28769 0.64277" shapeId="12" visibility="false" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000000" nodeId="83" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14"/>
+              <TransformGroup name="loadingStationAINode" translation="4.25572e-07 0 4.86797" rotation="0 90 0" nodeId="84"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="storageFarm" nodeId="85"/>
+        <TransformGroup name="mapPosition" nodeId="86"/>
+        <Shape name="infoTrigger" shapeId="13" visibility="false" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="87" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14"/>
+        <Shape name="refillPlayerTrigger" translation="-4.52 0 3" shapeId="14" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="88" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14">
+          <TransformGroup name="refillTriggerMarker" nodeId="89"/>
+        </Shape>
+        <TransformGroup name="markerLoading" translation="-6 0 3" nodeId="90"/>
+        <TransformGroup name="markerUnloading" translation="-3 0 3" nodeId="91"/>
+        <TransformGroup name="decalTriggerMarker" translation="-8.075 0 0" nodeId="92"/>
+        <TransformGroup name="decals" translation="-8.075 0 0" nodeId="93">
+          <Shape name="decaltrigger" shapeId="15" static="true" trigger="true" collisionFilterGroup="0x100000" collisionFilterMask="0x100000" nodeId="94" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="14"/>
+        </TransformGroup>
+      </TransformGroup>
+      <Camera name="persp" translation="-12.1341 2.69202 2.96892" rotation="1.82614 -65.4729 -8.03387e-08" visibility="false" nodeId="95" fov="60" nearClip="0.1" farClip="10000" orthographicHeight="1"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

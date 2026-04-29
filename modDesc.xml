@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="92">
+
+    <author>Collins Custom Modding</author>
+	
+    <version>1.2.0.2</version>
+	
+    <title>
+        <en>Anhydrous Ammonia Pack</en> 
+    </title>
+	
+    <description>
+        <en><![CDATA[ANHYDROUS AMMONIA PACK
+
+
+WHY ANHYDROUS AMMONIA 
+
+-Anhydrous ammonia application can provide many benefits to farming operations.  The high concentration of 82% nitrogen equates to more valuable nutrients for the plant and since NH3 can bond to moisture in the soil, it can be available for a longer period of time.  
+
+-With this in mind, you can spread out your work load and apply anhydrous ammonia in the fall after harvest, in the spring before planting or even side dressing to reach the perfect nitrogen needs of your crops.
+
+
+Changelog 1.2.0.2:
+
+-Fix AI worker 
+
+]]>
+        </en>
+    </description>
+	
+    <iconFilename>Icons/modIcon.dds</iconFilename>
+	
+    <multiplayer supported="true" />  
+	
+    <brands>
+        <brand name="BB" title="Behnke Enterprises" image="Textures/B_B_brand.dds" />
+        <brand name="CAMSO" title="Camso" image="Textures/Camso_brand.dds" />
+    </brands>
+	
+	<newcategory name="Anhydrous" title="Anhydrous Ammonia" type="TOOL" img="Icons/AnhydrousAmmonia.dds" />	
+	
+	<changeModTitle modTitle="Anhydrous Ammonia"/>	
+	
+    <l10n>
+		<text name="category_Anhydrous">
+			<en>Anhydrous Ammonia</en>
+		</text> 
+		<text name="function_anhydrous">
+		<en>Anhydrous ammonia application provide many benefits to farming operations.  The high concentration nitrogen equates to more valuable nutrients for the plant and bond to moisture in the soil for a longer period of time.</en>
+		</text>
+        <text name="shopItem_anhydrousTank">
+		<en>Anhydrous Ammonia Tank</en>
+		<de>Wasserfreies Ammoniak-Tank</de>
+		<fr>Réservoir d'ammoniac anhydre</fr>
+		</text>
+		<text name="function_anhydrousTank">
+		<en>You can refill your sprayers, toolbars and tankers at this tank.</en>
+		<de>An diesem Tank können Sie Ihre Sprühgeräte, Werkzeuge und Tankwagen auffüllen.</de>
+		<fr>Vous pouvez remplir vos pulvérisateurs, vos barres d'outils et vos camions-citernes à ce réservoir.</fr>
+		</text>
+		<text name="action_nextSign">
+		<en>Next Decal</en>
+		<de>Nächster Aufkleber</de>
+		<fr>Décalcomanie suivante</fr>
+		</text>
+		<text name="action_prevSign">
+		<en>Previous Decal</en>
+		<de>Vorheriger Aufkleber</de>
+		<fr>Décalcomanie précédente</fr>
+		</text>
+		<text name="fill_anhydrous">
+		<en>Anhydrous Ammonia</en>
+		<de>Wasserfreies Ammoniak</de>
+		</text>
+    </l10n>  
+	
+    <storeItems>
+        <storeItem xmlFilename="Xml/BehnkeTB17Cultivator.xml"/>
+        <storeItem xmlFilename="Xml/BehnkeTB37Cultivator.xml"/>
+        <storeItem xmlFilename="Xml/BehnkeTB60Cultivator.xml"/>
+		<storeItem xmlFilename="Xml/BehnkeFW1000.xml"/>
+		<storeItem xmlFilename="Xml/BehnkeWG2000.xml"/>
+		<storeItem xmlFilename="Xml/BehnkeGN4000.xml"/>
+        <storeItem xmlFilename="Xml/anhydrous_tank.xml"/>
+    </storeItems>
+
+</modDesc>
